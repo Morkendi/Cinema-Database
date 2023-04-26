@@ -1,0 +1,290 @@
+:root {
+    --main-color: #white;
+    --web-view-ids: Web_1920__1;
+}
+.mediaViewInfo {
+    --web-view-name: Web 1920 – 1;
+    --web-view-id: Web_1920__1;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+#Web_1920__1 {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(255,255,255,1);
+    overflow: hidden;
+    --web-view-name: Web 1920 – 1;
+    --web-view-id: Web_1920__1;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+#Rectngulo_1 {
+    fill: rgba(13,9,8,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rectngulo_1 {
+    position: absolute;
+    overflow: visible;
+    width: 1920px;
+    height: 1002px;
+    left: 0px;
+    top: 0px;
+}
+#FIlmFile_Logo_Cutout {
+    position: absolute;
+    width: 284px;
+    height: 317px;
+    left: 818px;
+    top: 94px;
+    overflow: visible;
+}
+#Grupo_4 {
+    position: absolute;
+    width: 612.41px;
+    height: 80px;
+    left: 586px;
+    top: 632px;
+    overflow: visible;
+}
+#Trazado_2 {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(242,53,53,1);
+    stroke-width: 4px;
+    stroke-linejoin: round;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Trazado_2 {
+    overflow: visible;
+    position: absolute;
+    width: 612.41px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#noun-magnifying-glass-5103876 {
+    fill: rgba(242,53,53,1);
+}
+.noun-magnifying-glass-5103876 {
+    overflow: visible;
+    position: absolute;
+    width: 35.298px;
+    height: 35.297px;
+    left: 548.113px;
+    top: 22.351px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#placeHolderText {
+    opacity: 0.66;
+    left: 55px;
+    top: 29px;
+    position: absolute;
+    overflow: visible;
+    width: 195px;
+    white-space: nowrap;
+    line-height: 26px;
+    margin-top: -2.5px;
+    text-align: left;
+    font-family: Articulat CF;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    color: rgba(112,112,112,1);
+    letter-spacing: 0.21px;
+}
+#FilmFile {
+    left: 794px;
+    top: 464px;
+    position: absolute;
+    overflow: visible;
+    width: 334px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Artifakt Element;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 82px;
+    color: rgba(242,242,242,1);
+    letter-spacing: 0.21px;
+}
+#Hecho_con_3_por_FilmFile_ {
+    left: 887px;
+    top: 1034px;
+    position: absolute;
+    overflow: visible;
+    width: 147px;
+    white-space: nowrap;
+    line-height: 26px;
+    margin-top: -7px;
+    text-align: left;
+    font-family: Articulat CF;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgba(112,112,112,1);
+    letter-spacing: 0.21px;
+}
+#This_product_uses_the_OMDB_API {
+    left: 113px;
+    top: 1034px;
+    position: absolute;
+    overflow: visible;
+    width: 406px;
+    white-space: nowrap;
+    line-height: 26px;
+    margin-top: -7px;
+    text-align: left;
+    font-family: Articulat CF;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgba(112,112,112,1);
+    letter-spacing: 0.21px;
+}
+#n_2023_FilmFile_Todos_los_dere {
+    left: 1521px;
+    top: 1034px;
+    position: absolute;
+    overflow: visible;
+    width: 264px;
+    white-space: nowrap;
+    line-height: 26px;
+    margin-top: -7px;
+    text-align: left;
+    font-family: Articulat CF;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgba(112,112,112,1);
+    letter-spacing: 0.21px;
+}
+#Search_Results {
+    position: absolute;
+    width: 114px;
+    height: 163px;
+    left: 641px;
+    top: 747px;
+    overflow: visible;
+}
+#Adobe_XD {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 67px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(242,53,53,1);
+}
+#Adobe_Photoshop {
+    left: 0px;
+    top: 49px;
+    position: absolute;
+    overflow: visible;
+    width: 115px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(242,53,53,1);
+}
+#Adobe_Illustrator {
+    left: 0px;
+    top: 98px;
+    position: absolute;
+    overflow: visible;
+    width: 105px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(242,53,53,1);
+}
+#Adobe_InDesign {
+    left: 0px;
+    top: 147px;
+    position: absolute;
+    overflow: visible;
+    width: 103px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(242,53,53,1);
+}
+#Grupo_6 {
+    position: absolute;
+    width: 118px;
+    height: 80px;
+    left: 1216px;
+    top: 632px;
+    overflow: visible;
+}
+#Button {
+    position: absolute;
+    width: 118px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+#Rectangle_937 {
+    fill: rgba(242,53,53,0.38);
+    stroke: rgba(242,53,53,1);
+    stroke-width: 4px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rectangle_937 {
+    position: absolute;
+    overflow: visible;
+    width: 118px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+}
+#Year {
+    opacity: 0.66;
+    left: 38px;
+    top: 29px;
+    position: absolute;
+    overflow: visible;
+    width: 44px;
+    white-space: nowrap;
+    line-height: 26px;
+    margin-top: -2.5px;
+    text-align: left;
+    font-family: Articulat CF;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    color: rgba(242,53,53,1);
+    letter-spacing: 0.21px;
+}
