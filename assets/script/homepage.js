@@ -1,0 +1,33 @@
+// Declare variables
+const movieEl = document.querySelector('#movie-search')
+const yearEl = document.querySelector('#year-select')
+const searchBtn = document.querySelector('#search-btn')
+const statusMsg = document.querySelector('#status-msg')
+
+function onStart() {
+    statusMsg.style.display = 'none';
+}
+
+function fetchData() {
+    let movieTitle = movieEl.value;
+    let selectedYear = yearEl.value;
+
+    // WHEN the search criteria icnludes a title AND a valid year OR there is only a title
+    // THEN stash items in local storage and load the "results.html" document
+    if (movieTitle && selectedYear > 1940 || movieTitle && !selectedYear) {
+        localStorage.setItem('Title', movieTitle);
+        localStorage.setItem('Year', selectedYear);
+        window.location.assign('results.html');
+    // IF the year is lesser than 1940 OR greater than 2023, display error message
+    } else if (selectedYear < 1940 || selectedYear > 2023) {
+        statusMsg.style.display = 'block'
+        statusMsg.textContent = 'Please select a valid year'
+    // If there is NO movie title, display error message
+    } else {
+        statusMsg.style.display = 'block'
+        statusMsg.textContent = 'Please enter a movie title'
+    }
+}
+
+onStart()
+searchBtn.addEventListener('click', fetchData)
