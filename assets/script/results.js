@@ -6,18 +6,19 @@ const plotEl = document.querySelector('#plot');
 const ratingEl = document.querySelector('#ratings');
 const reviewEl = document.querySelector('#reviews');
 
+// Retrieve query parameters from search URL
+let queryParams = new URLSearchParams(location.search)
+// Movie Title
+let movieTitle = queryParams.get('movieTitle');
+// Release Year
+let movieYear = queryParams.get('selectedYear');
 
-// User input
-let movieTitle = localStorage.getItem('Title')
-let movieYear = localStorage.getItem('Year')
+getParam(movieTitle, movieYear);
 
-// API call endpoint
-// ombdKey
+function getParam(title, year) {
+// OMBD Key
 const ombdKey = '3b46eb7c';
-
-function getParam() {
-var titleParam = movieTitle.replace(/ /g, '+');
-let searchURL = 'https://www.omdbapi.com/?t='+ titleParam + '&y='+ movieYear +'&plot=full&apikey=' + ombdKey;
+let searchURL = 'https://www.omdbapi.com/?t='+ title + '&y='+ year +'&plot=full&apikey=' + ombdKey;
 
 fetch(searchURL)
     .then(function(response) {
@@ -25,12 +26,34 @@ fetch(searchURL)
             response.json().then(function(data) {
                 console.log(data);
                 titleEl.textContent = data.Title;
-                plotEl.textContent = data.Plot
-                ratingEl.textContent = data.Metascore + '/100'
+                plotEl.textContent = data.Plot;
+                ratingEl.textContent = data.Ratings[1].Value;
+            // Save IMBD ID for poster search
+                let imbdID = data.imdbID;
+                fetchPoster(imbdID)
             })
         }
     }) 
 }
 
-getParam()
-// NOTE: Save the string in Local Storage and retrieve in other HTML
+function fetchPoster(ID) {
+// MyAPIFilms Key
+    // const posterKey = 'df143f9c-c9ae-486f-8b6e-17c5703b665f';
+    let searchURL = 'https://www.myapifilms.com/imdb/image/'+ ID +'?token='+ posterKey;
+
+    fetch(searchURL)
+    .then(function(response) {
+        if (response.ok) {
+            response.json().then(function(data) {
+                console.log(data);
+                let imageLink = data.data.link;
+                let posterLink = 'https://www.myapifilms.com/imdb/image/poster/' + imageLink +'?token='+ posterKey;
+                console.log(posterLink);
+                let imgSrc = document.querySelector('#poster');
+                imgSrc.setAttribute('src', posterLink);
+            })
+        }
+    }) 
+
+
+}

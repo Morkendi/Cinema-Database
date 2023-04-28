@@ -15,9 +15,7 @@ function fetchData() {
     // WHEN the search criteria icnludes a title AND a valid year OR there is only a title
     // THEN stash items in local storage and load the "results.html" document
     if (movieTitle && selectedYear > 1940 || movieTitle && !selectedYear) {
-        localStorage.setItem('Title', movieTitle);
-        localStorage.setItem('Year', selectedYear);
-        window.location.assign('results.html');
+        window.location.assign('results.html' + '?movieTitle='+ movieTitle +'&selectedYear='+ selectedYear);
     // IF the year is lesser than 1940 OR greater than 2023, display error message
     } else if (selectedYear < 1940 || selectedYear > 2023) {
         statusMsg.style.display = 'block'
