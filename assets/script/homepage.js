@@ -22,7 +22,7 @@ function fetchData() {
     } else if (selectedYear < 1940 || selectedYear > 2023) {
         statusMsg.style.display = 'block'
         statusMsg.textContent = 'Please select a valid year'
-    // If there is NO movie title, display error message
+    // IF there is NO movie title, display error message
     } else {
         statusMsg.style.display = 'block'
         statusMsg.textContent = 'Please enter a movie title'
