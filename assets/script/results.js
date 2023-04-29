@@ -5,6 +5,7 @@ const titleEl = document.querySelector('#movie-title');
 const plotEl = document.querySelector('#plot');
 const ratingEl = document.querySelector('#ratings');
 const reviewEl = document.querySelector('#reviews');
+const posterMsg = document.querySelector('#poster-msg')
 
 // Retrieve query parameters from search URL
 let queryParams = new URLSearchParams(location.search)
@@ -13,7 +14,9 @@ let movieTitle = queryParams.get('movieTitle');
 // Release Year
 let movieYear = queryParams.get('selectedYear');
 
-getParam(movieTitle, movieYear);
+function onStart() {
+    posterMsg.style.display = 'none';
+}
 
 function getParam(title, year) {
 // OMBD Key
@@ -25,12 +28,16 @@ fetch(searchURL)
         if (response.ok) {
             response.json().then(function(data) {
                 console.log(data);
-                titleEl.textContent = data.Title;
-                plotEl.textContent = data.Plot;
-                ratingEl.textContent = data.Ratings[1].Value;
-            // Save IMBD ID for poster search
-                let imbdID = data.imdbID;
-                fetchPoster(imbdID)
+                if (data.Response === 'True') {
+                    titleEl.textContent = data.Title;
+                    plotEl.textContent = data.Plot;
+                    ratingEl.textContent = data.Ratings[1].Value;
+                // Save IMBD ID for poster search
+                    let imbdID = data.imdbID;
+                    fetchPoster(imbdID)
+                } else {
+                    window.location.assign('404.html');
+                }
             })
         }
     }) 
@@ -52,8 +59,12 @@ function fetchPoster(ID) {
                 let imgSrc = document.querySelector('#poster');
                 imgSrc.setAttribute('src', posterLink);
             })
+        } else {
+            posterEl.style.display = 'none';
+            posterMsg.style.display = 'block';
         }
     }) 
-
-
 }
+
+getParam(movieTitle, movieYear);
+onStart();
