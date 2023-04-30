@@ -1,0 +1,15 @@
+/* Tailwind custom.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Override the colors in the theme */
+@layer utilities {
+  /* Add your custom colors */
+  .bg-custom {
+    --bg-custom: #FF0000;
+    background-color: var(--bg-custom);
+  }
+  .
+}
