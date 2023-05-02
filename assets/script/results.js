@@ -43,10 +43,10 @@ fetch(searchURL)
         }
     }) 
 }
-/* DELETE THIS COMMENT BLOCK WHEN DONE
+
 function fetchPoster(ID) {
 // MyAPIFilms Key
-    // const posterKey = 'df143f9c-c9ae-486f-8b6e-17c5703b665f';
+    const posterKey = 'df143f9c-c9ae-486f-8b6e-17c5703b665f';
     let searchURL = 'https://www.myapifilms.com/imdb/image/'+ ID +'?token='+ posterKey;
 
     fetch(searchURL)
@@ -65,7 +65,7 @@ function fetchPoster(ID) {
             posterMsg.style.display = 'block';
         }
     }) 
-} */
+} 
 
 function scrollHide(){
 var footer = document.getElementById('footer');

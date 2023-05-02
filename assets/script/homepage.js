@@ -4,6 +4,7 @@ const yearEl = document.querySelector('#year-select')
 const searchBtn = document.querySelector('#search-btn')
 const statusMsg = document.querySelector('#status-msg')
 const searchList = document.querySelector('#search-list')
+const historyEl = document.querySelector('#search-history')
 const eraseBtn = document.querySelector('#erase-btn')
 
 // Fetch array from local Storage
@@ -18,7 +19,7 @@ function onStart() {
     statusMsg.style.display = 'none';
 
     // Loop through array to display recently searched titles
-    for (let i = 0; i <= 5; i++) {
+    for (let i = 0; i < 5; i++) {
         let searchTerm = document.createElement('li');
         searchTerm.innerHTML = storedTitles[i];
         searchList.appendChild(searchTerm);
@@ -59,4 +60,10 @@ searchBtn.addEventListener('click', fetchData);
 eraseBtn.addEventListener('click', function eraseHistory() {
     localStorage.clear();
     document.location.reload();
-})
+});
+movieEl.addEventListener('focus', function() {
+    historyEl.classList.remove('hidden');
+});
+// movieEl.addEventListener('blur', function() {
+//     historyEl.classList.add('hidden');
+// });
