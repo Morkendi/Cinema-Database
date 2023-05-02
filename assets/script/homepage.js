@@ -6,15 +6,27 @@ const statusMsg = document.querySelector('#status-msg')
 const searchList = document.querySelector('#search-list')
 const eraseBtn = document.querySelector('#erase-btn')
 
+let storedTitles = JSON.parse(localStorage.getItem('Array'));
+console.log(storedTitles)
+
+if (!storedTitles) {
+    storedTitles = []
+}
+
 // Starting conditions
 function onStart() {
     statusMsg.style.display = 'none';
+
+    for (let i = 0; i < storedTitles.length; i++) {
+        let searchTerm = document.createElement('li');
+        searchTerm.innerHTML = storedTitles[i];
+        searchList.appendChild(searchTerm);
+    }
 }
 
 function saveTitle() {
-    let storedTitles
     let addTitle = localStorage.getItem('title');
-    storedTitles.push(addTitle)
+    storedTitles.push(addTitle);
     localStorage.setItem('Array', JSON.stringify(storedTitles));
     console.log(storedTitles);
 }
