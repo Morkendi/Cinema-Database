@@ -27,7 +27,6 @@ fetch(searchURL)
     .then(function(response) {
         if (response.ok) {
             response.json().then(function(data) {
-                console.log(data);
                 if (data.Response === 'True') {
                     titleEl.textContent = data.Title;
                     plotEl.textContent = data.Plot;
