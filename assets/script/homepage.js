@@ -19,7 +19,7 @@ function onStart() {
     statusMsg.style.display = 'none';
 
     // Loop through array to display recently searched titles
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 4; i++) {
         let searchTerm = document.createElement('li');
         searchTerm.innerHTML = storedTitles[i];
         searchList.appendChild(searchTerm);
@@ -64,6 +64,6 @@ eraseBtn.addEventListener('click', function eraseHistory() {
 movieEl.addEventListener('focus', function() {
     historyEl.classList.remove('hidden');
 });
-// movieEl.addEventListener('blur', function() {
-//     historyEl.classList.add('hidden');
-// });
+movieEl.addEventListener('blur', function() {
+    historyEl.classList.add('hidden');
+});
