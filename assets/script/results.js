@@ -4,8 +4,8 @@ const posterEl = document.querySelector('#poster');
 const titleEl = document.querySelector('#movie-title');
 const plotEl = document.querySelector('#plot');
 const ratingEl = document.querySelector('#ratings');
-const reviewEl = document.querySelector('#reviews');
-const posterMsg = document.querySelector('#poster-msg')
+const genreEl = document.querySelector('#genre');
+const posterMsg = document.querySelector('#poster-msg');
 
 // Retrieve query parameters from search URL
 let queryParams = new URLSearchParams(location.search)
@@ -27,9 +27,11 @@ fetch(searchURL)
     .then(function(response) {
         if (response.ok) {
             response.json().then(function(data) {
+                console.log(data);
                 if (data.Response === 'True') {
                     titleEl.textContent = data.Title;
                     plotEl.textContent = data.Plot;
+                    genreEl.textContent = data.Genre;
                     ratingEl.textContent = data.Ratings[1].Value;
                 // Save IMBD ID for poster search
                     let imbdID = data.imdbID;
