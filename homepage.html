@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FilmFile</title>
+    <!-- Links to external frameworks and styles -->
     <link rel="stylesheet" type="text/css" href="./assets/css/jass.css"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
+    <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/rsb0ylk.css">
-    
     <script src="https://kit.fontawesome.com/fb71be981b.js" crossorigin="anonymous"></script>
 </head>
 
@@ -24,7 +25,9 @@
             id="movie-search" type="text" placeholder="Movie title">
             <input class="peer px-3 py-2 my-3 bg-white border shadow-sm border-slate-300 placeholder-slate-400 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 focus:outline-none focus:border-red-500 focus:ring-skyred-500 block w-24 lg:w-48 rounded-full sm:text-sm focus:ring-5 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled-shadow-none placeholder-italic placeholder:text-slate-400"
             type="text" id="year-select" placeholder="Year (YYYY)">
-            <button class="bg-red-500 hover:bg-red-700 w-1 px-5 py-2 text-sm leading-5 rounded-full font-semibold text-white " id="search-btn"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></button>
+            <button class="container bg-red-500 hover:bg-red-700 px-6 py-2 text-sm w-24 lg:w-36 rounded-full text-white justify-center" id="search-btn">
+                <i class="fa-solid fa-magnifying-glass fa-flip-horizontal justify-left"></i>
+            </button>
         </div>
         <div class="text-white mb-2 p-3" id="status-msg"></div>
         <div id="search-history" class="hidden relative p-4 pt-52 lg:pt-24 m-4 flex flex-col align-bottom">
