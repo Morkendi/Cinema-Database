@@ -57,6 +57,18 @@ h1 {
     font-style: normal; 
 }
 
+h2 {
+    font-family: "articulat-heavy-cf", sans-serif;
+font-weight: 900;
+font-style: normal;
+}
+
+h3 {
+    font-family: "articulat-cf", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
 p {
     font-family: "articulat-cf", sans-serif;
     font-weight: 400;
@@ -73,4 +85,8 @@ p {
     font-family: "articulat-cf", sans-serif;
     font-weight: 600;
     font-style: italic;
+}
+
+#genre {
+    font-weight: 900;
 }
