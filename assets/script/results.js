@@ -41,7 +41,7 @@ fetch(searchURL)
         }
     }) 
 }
-
+/* DELETE THIS COMMENT BLOCK WHEN DONE
 function fetchPoster(ID) {
 // MyAPIFilms Key
     // const posterKey = 'df143f9c-c9ae-486f-8b6e-17c5703b665f';
@@ -63,7 +63,25 @@ function fetchPoster(ID) {
             posterMsg.style.display = 'block';
         }
     }) 
+} */
+
+function scrollHide(){
+var footer = document.getElementById('footer');
+  var lastScrollPosition = 0;
+
+  window.addEventListener('scroll', function() {
+    var currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScrollPosition > lastScrollPosition) {
+      footer.classList.add('opacity-100');
+    } else {
+      footer.classList.remove('opacity-100');
+    }
+
+    lastScrollPosition = currentScrollPosition;
+  });
 }
 
 getParam(movieTitle, movieYear);
 onStart();
+scrollHide();
