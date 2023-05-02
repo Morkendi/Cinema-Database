@@ -6,8 +6,8 @@ const statusMsg = document.querySelector('#status-msg')
 const searchList = document.querySelector('#search-list')
 const eraseBtn = document.querySelector('#erase-btn')
 
+// Fetch array from local Storage
 let storedTitles = JSON.parse(localStorage.getItem('Array'));
-console.log(storedTitles)
 
 if (!storedTitles) {
     storedTitles = []
@@ -17,13 +17,15 @@ if (!storedTitles) {
 function onStart() {
     statusMsg.style.display = 'none';
 
-    for (let i = 0; i < storedTitles.length; i++) {
+    // Loop through array to display recently searched titles
+    for (let i = 0; i <= 5; i++) {
         let searchTerm = document.createElement('li');
         searchTerm.innerHTML = storedTitles[i];
         searchList.appendChild(searchTerm);
     }
 }
 
+// When user inputs a title, the title gets saved to localStorage so it can be added to array
 function saveTitle() {
     let addTitle = localStorage.getItem('title');
     storedTitles.push(addTitle);
@@ -35,7 +37,7 @@ function fetchData() {
     let movieTitle = movieEl.value;
     let selectedYear = yearEl.value;
 
-    // WHEN the search criteria icnludes a title AND a valid year OR there is only a title
+    // WHEN the search criteria includes a title AND a valid year OR there is only a title
     // THEN stash items in local storage and load the "results.html" document
     if (movieTitle && selectedYear > 1940 || movieTitle && !selectedYear) {
         localStorage.setItem('title', movieTitle);
