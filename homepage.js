@@ -64,6 +64,6 @@ eraseBtn.addEventListener('click', function eraseHistory() {
 movieEl.addEventListener('focus', function() {
     historyEl.classList.remove('hidden');
 });
-// movieEl.addEventListener('blur', function() {
-//     historyEl.classList.add('hidden');
-// });
+movieEl.addEventListener('blur', function() {
+    historyEl.classList.add('hidden');
+});

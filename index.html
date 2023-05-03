@@ -30,11 +30,12 @@
             </button>
         </div>
         <div class="text-white mb-2 p-3" id="status-msg"></div>
-        <div id="search-history" class="hidden relative p-4 pt-52 lg:pt-24 m-4 flex flex-col align-bottom">
+        <div id="search-history" class="hidden relative p-4 pt-52 my-12 lg:pt-24 m-4 flex flex-col align-bottom">
             <h2>Recently searched titles:</h2>
-            <ul id="search-list" class="overflow-scroll flex-col-reverse"></ul>
-            <button id="erase-btn">Clear History</button>
+            <ul id="search-list" class="flex-col-reverse"></ul>
+            <button id="erase-btn" class="container bg-neutral-100 hover:bg-red-500 px-6 py-2 text-sm m-3 w-24 lg:w-36 rounded-full text-stone-900 hover:text-neutral-100 justify-center">Clear History</button>
         </div>
+        <div id="blank" class="h-32"></div>
     </main>
     <footer class="bg-stone-800 text-xs lg:text-sm text-white flex justify-left lg:justify-between items-center p-6 fixed bottom-0 left-0 right-0 transition-opacity duration-500" id="footer">
             <p class="mb-2 p-3">Hecho con ❤️ por FilmFile. </p>
